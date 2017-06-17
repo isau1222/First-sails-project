@@ -1,5 +1,11 @@
 node_modules
 .idea
 .sass-cache
+<<<<<<< HEAD
 hwqerwewr
 qwerty
+=======
+.test-lib
+git-wtf-test
+bhfcbcv
+>>>>>>> 9daac0245ab0caefb90aba74d42b79f810122104
