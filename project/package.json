@@ -23,7 +23,8 @@
     "sails": "~0.12.13",
     "sails-disk": "~0.10.9",
     "sails-hook-flash": "^0.2.2",
-    "sails-mysql": "^0.11.5"
+    "sails-mysql": "^0.11.5",
+    "WTADFASD"
   },
   "scripts": {
     "debug": "node debug app.js",
