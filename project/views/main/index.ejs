@@ -1,0 +1,11 @@
+<% layout('../layout.ejs') -%>
+<div class="container">
+
+	<% if (typeof req.session.user!== 'undefined') { %>
+	<h1>
+	<%= req.session.user.login%>
+	</h1>
+	<% } else { %>
+
+	<% } %>
+</div>

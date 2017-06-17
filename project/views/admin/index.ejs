@@ -1,0 +1,39 @@
+<% layout('../layout.ejs') -%>
+
+<% stylesheet('css/admin.css') -%>
+
+<% script('js/jquery.maskedinput.js') -%>
+<% script('js/checker.js') -%>
+<% script('js/adminWorker.js') -%>
+
+<div class="container admin-container" method="post" >
+	<h1>Change admin info</h1>
+
+  <% flash.get('success').forEach(function (message) { %>
+  <div class="alert alert-success alert-dismissable">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong>
+  </div>
+  <% }) %>
+
+  <form action="/admin/setInfo" method="post" >
+
+		<div class="form-group">
+			<label for="email">Email address:</label>
+			<input onkeyup="keyCheckMail()" type="email" name="mail" placeholder="expample: apr@mail.ru" class="form-control" id="email" value="<%= info.mail %>">
+		</div>
+
+		<div class="form-group">
+			<label for="tel">Telephone:</label>
+			<input onkeyup="keyCheckTel()" type="tel" placeholder="example: +7 (903) 564-80-67" name="telephone" class="form-control" id="tel" value="<%= info.telephone %>">
+		</div>
+
+		<div class="form-group">
+			<label for="fullName">Full name:</label>
+			<input onkeyup="keyCheckFullName()" type="text" name="fullName" placeholder="example: Andr Anik Serr" class="form-control" id="fullName" value="<%= info.fullName %>">
+		</div>
+
+
+		<input id="inputSubmit" type="submit" class="btn btn-default">
+	</form>
+</div>
