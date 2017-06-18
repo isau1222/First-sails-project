@@ -27,8 +27,8 @@
       color: #fff; }
 
 .container-cool-padding, .about-container, .what-we-do-container {
-  padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-top: 10px;
+  padding-bottom: 20px; }
 
 .about-container {
   background-color: #fdf0d5; }

@@ -9,6 +9,12 @@ module.exports = {
   index: function (req, res) {
     Info.find({})
       .then((info) => {
+        if (info.length === 0) {
+          req.addFlash('error', 'Не найдено контактов администратора!');
+          res.render('main/index', {info: {}});
+          sails.log('Error in main/index ' + err);
+          return;
+        }
         res.render('main/index', {info: info[0]});
       })
       .catch((err) => {
