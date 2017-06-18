@@ -33,10 +33,10 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': 'Main.index',
-  '/admin': 'Admin.index',
+  'get /admin': 'Admin.index',
+  'post /admin': 'Admin.setInfo',
   '/login': 'Main.login',
   '/logout': 'Main.logout',
-  '/admin/setInfo': 'Admin.setInfo',
 
 
 

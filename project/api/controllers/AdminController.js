@@ -13,7 +13,7 @@ module.exports = {
         res.render('admin/index', {info: info[0]});
       })
       .catch((err) => {
-        req.addFlash('error', 'Can\'t find admin information!');
+        req.addFlash('error', 'Нет соединения с базой данных!');
         res.render('admin/index', {info: {} });
         sails.log('Error in admin/index ' + err);
       })
@@ -29,11 +29,11 @@ module.exports = {
 
     Info.update({}, newInfo)
       .then((info) => {
-        req.addFlash('success', "It's success");
+        req.addFlash('success', "Данные администратора успешно изменены!");
         res.redirect('/admin');
       })
       .catch((err) => {
-        req.addFlash('error', 'Can\'t add info in database');
+        req.addFlash('error', 'Нет соединения с базой данных!');
         res.redirect('/admin');
         sails.log('Error in admin/index ' + err);
       })

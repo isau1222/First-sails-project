@@ -1,0 +1,111 @@
+$sm: 768px;
+$md: 992px;
+$lg: 1200px;
+
+
+@mixin font-sizer($size) {
+  font-size: $size;
+
+  @media (max-width: $lg) {
+    font-size: $size*0.8;
+  }
+  @media (max-width: $md) {
+    font-size: $size*0.7;
+  }
+  @media (max-width: $sm) {
+    font-size: $size*0.6;
+  }
+}
+
+.big-font-size {
+  @include font-sizer(3em);
+  font-weight: 800;
+}
+
+.image-container {
+  min-height:50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../images/gis-dubna.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  margin-top:0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .image-element {
+    padding: 0 10px 0 10px;
+    h1 {
+      @extend .big-font-size;
+      color: #fff;
+    }
+  }
+}
+
+.container-cool-padding {
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+$h1-mar-left: 20px;
+
+.about-container {
+  @extend .container-cool-padding;
+  background-color: #fdf0d5;
+  h1 {
+    @extend .big-font-size;
+    color: #162a43;
+    margin-left: $h1-mar-left;
+  }
+  .wrapper {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    .wrap-elements {
+      padding: $h1-mar-left;
+      width: 50%;
+
+      @media (max-width: $md) {
+        width: 100%;
+      }
+
+      p {
+        color: #162a43;
+        font-size:1em;
+      }
+    }
+  }
+}
+
+.what-we-do-container {
+  @extend .container-cool-padding;
+
+  background-color: #d6edff;
+
+  .wrapper {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    .wrap-elements {
+      h1 {
+        @include font-sizer(1.9em);
+        font-weight: 600;
+        color: #162a43;
+      }
+      padding: $h1-mar-left;
+      width: 50%;
+
+      @media (max-width: $md) {
+        width: 100%;
+      }
+
+      ul {
+        color: #eb5e55;
+        li p{
+          color: black;
+        }
+      }
+
+    }
+  }
+}

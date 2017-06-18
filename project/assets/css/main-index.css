@@ -1,0 +1,82 @@
+.big-font-size, .image-container .image-element h1, .about-container h1 {
+  font-size: 3em;
+  font-weight: 800; }
+  @media (max-width: 1200px) {
+    .big-font-size, .image-container .image-element h1, .about-container h1 {
+      font-size: 2.4em; } }
+  @media (max-width: 992px) {
+    .big-font-size, .image-container .image-element h1, .about-container h1 {
+      font-size: 2.1em; } }
+  @media (max-width: 768px) {
+    .big-font-size, .image-container .image-element h1, .about-container h1 {
+      font-size: 1.8em; } }
+
+.image-container {
+  min-height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../images/gis-dubna.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .image-container .image-element {
+    padding: 0 10px 0 10px; }
+    .image-container .image-element h1 {
+      color: #fff; }
+
+.container-cool-padding, .about-container, .what-we-do-container {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
+.about-container {
+  background-color: #fdf0d5; }
+  .about-container h1 {
+    color: #162a43;
+    margin-left: 20px; }
+  .about-container .wrapper {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap; }
+    .about-container .wrapper .wrap-elements {
+      padding: 20px;
+      width: 50%; }
+      @media (max-width: 992px) {
+        .about-container .wrapper .wrap-elements {
+          width: 100%; } }
+      .about-container .wrapper .wrap-elements p {
+        color: #162a43;
+        font-size: 1em; }
+
+.what-we-do-container {
+  background-color: #d6edff; }
+  .what-we-do-container .wrapper {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap; }
+    .what-we-do-container .wrapper .wrap-elements {
+      padding: 20px;
+      width: 50%; }
+      .what-we-do-container .wrapper .wrap-elements h1 {
+        font-size: 1.9em;
+        font-weight: 600;
+        color: #162a43; }
+        @media (max-width: 1200px) {
+          .what-we-do-container .wrapper .wrap-elements h1 {
+            font-size: 1.52em; } }
+        @media (max-width: 992px) {
+          .what-we-do-container .wrapper .wrap-elements h1 {
+            font-size: 1.33em; } }
+        @media (max-width: 768px) {
+          .what-we-do-container .wrapper .wrap-elements h1 {
+            font-size: 1.14em; } }
+      @media (max-width: 992px) {
+        .what-we-do-container .wrapper .wrap-elements {
+          width: 100%; } }
+      .what-we-do-container .wrapper .wrap-elements ul {
+        color: #eb5e55; }
+        .what-we-do-container .wrapper .wrap-elements ul li p {
+          color: black; }
+
+/*# sourceMappingURL=main-index.css.map */

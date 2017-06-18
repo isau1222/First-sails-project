@@ -12,14 +12,14 @@ module.exports = {
         res.render('main/index', {info: info[0]});
       })
       .catch((err) => {
-        req.addFlash('error', 'Can\'t find admin information!');
+        req.addFlash('error', 'Нет соединения с базой данных!');
         res.render('main/index', {info: {}});
         sails.log('Error in main/index ' + err);
       })
   },
 
   login: function (req, res) {
-    function createError(req, message = 'Bad login or password!') {
+    function createError(req, message = 'Неправильный логин или пароль!') {
       req.addFlash('error', message);
     }
 
@@ -27,7 +27,7 @@ module.exports = {
     var password = req.param("password");
 
     if (!login || !password) {
-      createError(req, 'Please type in login and password!');
+      createError(req, 'Пожалуйста, введите логин и пароль!');
       res.redirect('back');
       return;
     }
