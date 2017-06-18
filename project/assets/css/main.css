@@ -19,6 +19,9 @@ footer {
   padding-top: 20px;
   padding-bottom: 10px;
   color: #999; }
+  footer a {
+    color: #9098a4;
+    font-weight: 800; }
 
 body {
   font-family: 'Open Sans', sans-serif; }
