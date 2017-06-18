@@ -12,7 +12,7 @@
       font-size: 1.8em; } }
 
 .image-container {
-  min-height: 50vh;
+  min-height: 30vh;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url(../images/gis-dubna.jpg);
   background-size: cover;
   background-position: center;
@@ -21,6 +21,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center; }
+  @media (max-width: 768px) {
+    .image-container {
+      min-height: 40vh; } }
   .image-container .image-element {
     padding: 0 10px 0 10px; }
     .image-container .image-element h1 {
