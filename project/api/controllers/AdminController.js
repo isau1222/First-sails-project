@@ -10,17 +10,17 @@ module.exports = {
 
     Info.find({})
       .then((info) => {
-        if (info.length ===0) {
+        if (info.length === 0) {
           req.addFlash('error', 'Не найдено контактов администратора!');
-          res.render('admin/index', {info: {} });
-          sails.log('Error in admin/index ' + err);
+          res.render('admin/index', {info: {}});
+          sails.log('Error in admin/index ' + 'Не найдено контактов администратора!');
           return;
         }
         res.render('admin/index', {info: info[0]});
       })
       .catch((err) => {
         req.addFlash('error', 'Нет соединения с базой данных!');
-        res.render('admin/index', {info: {} });
+        res.render('admin/index', {info: {}});
         sails.log('Error in admin/index ' + err);
       })
   },
@@ -35,8 +35,20 @@ module.exports = {
 
     Info.update({}, newInfo)
       .then((info) => {
-        req.addFlash('success', "Данные администратора успешно изменены!");
-        res.redirect('/admin');
+        if (info.length !== 0) {
+          req.addFlash('success', "Данные администратора успешно изменены!");
+          return res.redirect('/admin');
+        }
+        Info.create(newInfo)
+          .then((info) => {
+            req.addFlash('success', "Данные администратора успешно изменены!");
+            res.redirect('/admin');
+          })
+          .catch((err) => {
+            req.addFlash('error', 'Нет соединения с базой данных!');
+            res.redirect('/admin');
+            sails.log('Error in admin/index ' + err);
+          })
       })
       .catch((err) => {
         req.addFlash('error', 'Нет соединения с базой данных!');

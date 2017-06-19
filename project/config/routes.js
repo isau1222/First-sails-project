@@ -38,7 +38,6 @@ module.exports.routes = {
   '/login': 'Main.login',
   '/logout': 'Main.logout',
 
-
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

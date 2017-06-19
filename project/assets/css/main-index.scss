@@ -23,7 +23,7 @@ $lg: 1200px;
 
 .image-container {
   min-height: 30vh;
-  
+
   @media (max-width: $sm) {
     min-height: 40vh;
   }
